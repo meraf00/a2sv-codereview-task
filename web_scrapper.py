@@ -18,6 +18,7 @@ def get_urls(site):
     a_tags = parsed.find_all('a', href=True)
     
     links = set()
+
     for a_tag in a_tags:
         absolute_url = urljoin(site, a_tag['href'])
         if is_alive(absolute_url):
